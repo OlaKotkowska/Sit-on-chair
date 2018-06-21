@@ -1,0 +1,37 @@
+body{
+  background-color: #DDDDDD;
+}
+#grid-conteiner{
+  width: 100%;
+  margin: auto;
+  max-width: $max-site-width;
+}
+
+.row::before, .row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.row{
+  border: 1px solid blue;
+}
+[class*='col-']{
+  float: left;
+  width: 100%;
+}
+
+//@media	(max-width:	550px)	{
+		//[class*='col-']	{
+				//float:	none;
+				//width:	100%;
+		//}
+//}
+//ustawi nam kolumny jedna pod sobą
+@media (min-width:$max-site-width) {
+  @for $i from 1 through 12{
+    .col-#{$i}{
+      width: $i * 100%/12;
+      border: 1px solid red;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.top{
+  background-color: black;
+  height: 40px;
+  padding: 10px;
+    p{
+      color:white;
+      border: 1px solid red;
+      width: 60%;
+      float: left;
+      text-transform: uppercase;
+        &>span{
+          color: $colorMint;
+        }
+    }
+    nav{
+      float: right;
+        a{
+          color: $colorWhite;
+          text-decoration: none;
+          border:1px solid red;
+          width: 20%;
+          text-align: center;
+          padding: 0 15px;
+        }
+    }
+}
+
+//end of top/nav
+//section slider
+.slider{
+background: linear-gradient(to bottom, #ffffff 0%, #cfced6 100%);
+}
+.slider_left li{
+     display: none;
+   }
+   .slider_left ul{
+     list-style: none;
+   }
+   .slider .visible{
+     display: block;
+   }
+
+
+.slider_left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+    img{
+      margin-top: 20%;
+      width: 100%;
+      max-width: 600px;
+    }
+    #prevPicture{
+      @include button_slider;
+      left: 20px;
+    }
+}
+.slider_right{
+  position: relative;
+    .right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+        h1{
+          font-size: 32px;
+          font-weight: 400;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          margin-top: 20%;
+            &>span{
+              color: $colorMint;
+            }
+        }
+        p{
+          padding: 20px 0;
+          font-size: 20px;
+          text-align: center;
+          margin-bottom: 20px;
+          margin: 0 60px;
+        }
+        button{
+          padding: 10px;
+          border-radius: 10px;
+          background-color:#27c7ab;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+        }
+    }
+    #nextPicture{
+      @include button_slider;
+      right:20px;
+    }
+}
+//end of slider
+.chair{
+    display: flex;
+    justify-content: space-between;
+    hr{
+      width: 150px;
+      border: 5px solid #27c7ab;
+      background-color:#27c7ab;
+    }
+    .col-3{
+      margin: 60px 0px;
+      height: 300px;
+    }
+}

@@ -1,0 +1,8 @@
+@mixin button_slider{
+  font-size: 64px;
+  color:$colorMint;
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  top:200px;
+}
